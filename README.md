@@ -3,7 +3,7 @@
 Install
 
 1) git Clone 
-git clone https://github.com/kanalfred/vim.git
+git clone https://github.com/edwardkan/vim.git
 
 2) mv vim .vim
 
