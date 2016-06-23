@@ -13,6 +13,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 -----------------------------------
 
 Install tmux 
+
 1) sudo apt-get install tmux
 
 2) ln -s ~/.vim/tmux.conf ~/.tmux.conf
