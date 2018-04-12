@@ -55,9 +55,13 @@ noremap <C-t> :tabnew<CR>
 
 " Custom Key Map
 " --------------------------
+" C - build & run F2
+map <F4> : !gcc % && ./a.out <CR>
+
 " Tab navigation F8 & F9
 map <F8> gt
 map <F7> gT
+
 " Tab navigation Ctrl+j & Ctrl+k
 noremap <C-j> :tabp<CR>
 noremap <C-k> :tabn<CR>
@@ -97,3 +101,15 @@ let g:airline_theme = 'dark'
 " Show full file path on status line
 let g:airline_section_c = '%F'
 
+
+
+"syntastic config 
+"https://github.com/vim-syntastic/syntastic/blob/master/README.markdown
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
