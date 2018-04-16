@@ -55,8 +55,14 @@ noremap <C-t> :tabnew<CR>
 
 " Custom Key Map
 " --------------------------
-" C - build & run F2
-map <F4> : !gcc % && ./a.out <CR>
+
+" C++ build with -g debug flag F3
+map <F3> : !g++ -std=c++0x -g % && ./a.out <CR>
+ 
+" C++ build & run F4
+" map <F4> : !gcc % && ./a.out <CR>
+map <F4> : !g++ -std=c++0x % && ./a.out <CR>
+
 
 " Tab navigation F8 & F9
 map <F8> gt
@@ -113,3 +119,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" C++ syntax check
+let g:syntastic_cpp_config_file = '.clang_complete'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_auto_refresh_includes = 1
