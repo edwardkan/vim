@@ -48,6 +48,11 @@ set completeopt+=longest
 " History
 set history=1000 
 
+" Place cursor in { }
+inoremap {<cr> {<cr>}<c-o><s-o>
+inoremap [<cr> [<cr>]<c-o><s-o>
+inoremap (<cr> (<cr>)<c-o><s-o>
+
 
 " Custom Ctrl Key Map
 " ------------------------
