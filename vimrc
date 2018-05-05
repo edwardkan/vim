@@ -64,6 +64,12 @@ noremap <C-t> :tabnew<CR>
 noremap <C-j> :tabp<CR>
 noremap <C-k> :tabn<CR>
 
+" Quicker window movement
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-h> <C-w>h
+nnoremap <S-l> <C-w>l
+
 
 " Custom Function Key Map
 " --------------------------
@@ -185,3 +191,6 @@ let g:airline_theme = 'dark'
 
 " Show full file path on status line
 let g:airline_section_c = '%F'
+
+" displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1
