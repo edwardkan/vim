@@ -182,7 +182,6 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 " Theme
 " ----------------------------
 colorscheme jellybeans
-let g:airline_theme = 'dark'
 
 " Airline
 " https://github.com/bling/vim-airline/blob/master/README.md
@@ -194,3 +193,4 @@ let g:airline_section_c = '%F'
 
 " displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
+
