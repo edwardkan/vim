@@ -60,8 +60,8 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 
 " Automatically closes (brackets & parentheses)  all groups, 
 " http://vim.wikia.com/wiki/Automatically_append_closing_characters
-inoremap        (  ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+" inoremap        (  ()<Left>
+" inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 
 " Map Esc to the CapsLock key
