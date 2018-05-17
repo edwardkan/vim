@@ -64,6 +64,12 @@ inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 
+" Map Esc to the CapsLock key
+" https://stackoverflow.com/questions/2176532/how-to-map-caps-lock-key-in-vim
+
+au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
 " Custom Ctrl Key Map
 " ------------------------
 
