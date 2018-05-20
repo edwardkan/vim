@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 syntax on
 filetype plugin indent on
 
@@ -56,12 +57,6 @@ set history=1000
 inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
-
-
-" Automatically closes (brackets & parentheses)  all groups, 
-" http://vim.wikia.com/wiki/Automatically_append_closing_characters
-" inoremap        (  ()<Left>
-" inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 
 " Map Esc to the CapsLock key
@@ -129,6 +124,11 @@ nmap <F2> :NERDTreeToggle<CR>
 noremap <C-x> :CtrlPBuffer<CR>
 
 
+" AutoFormat
+" ------------------------
+noremap <F6> :Autoformat<CR>
+
+
 "syntastic config 
 "----------------------------
 "https://github.com/vim-syntastic/syntastic/blob/master/README.markdown
@@ -142,10 +142,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " C++ syntax check
-"let g:syntastic_cpp_config_file = '.clang_complete'
-"let g:syntastic_cpp_compiler = 'clang++'
-"let g:syntastic_cpp_check_header = 1
-"let g:syntastic_cpp_auto_refresh_includes = 1
 "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 '
 
