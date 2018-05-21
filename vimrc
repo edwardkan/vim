@@ -201,9 +201,10 @@ let g:airline_theme = 'dark'
 
 " displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 
 " Show full file path on status line
-" let g:airline_section_c = '%F'
+let g:airline_section_c = '%F'
 
 let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
