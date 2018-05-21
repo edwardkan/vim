@@ -199,9 +199,26 @@ colorscheme jellybeans
 set laststatus=2
 let g:airline_theme = 'dark'
 
-" Show full file path on status line
-let g:airline_section_c = '%F'
-
 " displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
+
+" Show full file path on status line
+" let g:airline_section_c = '%F'
+
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+let g:airline_powerline_fonts = 1
+
+
+" AG vim 
+" ---------------------------
+" https://github.com/rking/ag.vim
+ 
+" Serach from the root
+"let g:ag_working_path_mode="r"
+
+
+
 
