@@ -216,10 +216,25 @@ let g:airline_powerline_fonts = 1
 " AG vim 
 " ---------------------------
 " https://github.com/rking/ag.vim
- 
-" Serach from the root
-"let g:ag_working_path_mode="r"
+
+" exclude tags file
+let g:agprg='ag -S --nocolor --nogroup --column --ignore "tags"'
 
 
+" Gundo 
+"----------------------------  
+" https://github.com/sjl/gundo.vim
+
+nnoremap <F9> :GundoToggle<CR>
+
+set undodir=~/.vim/tmp/undo// 
+set undofile
+set history=100
+set undolevels=100
+
+" Issue requre python 2.4 when version 2.7 is installed
+if has('python3')
+    let g:gundo_prefer_python3 = 1
+endif
 
 
