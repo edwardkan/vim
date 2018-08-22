@@ -76,14 +76,22 @@ au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 noremap <C-t> :tabnew<CR>
 
 " Tab navigation Ctrl+j & Ctrl+k
-noremap <C-j> :tabp<CR>
-noremap <C-k> :tabn<CR>
+"noremap <C-j> :tabp<CR>
+"noremap <C-k> :tabn<CR>
+
+noremap <C-j> :BufSurfBack<CR>
+noremap <C-k> :BufSurfForward<CR>
 
 " Quicker window movement
 nnoremap <S-j> <C-w>j
 nnoremap <S-k> <C-w>k
 nnoremap <S-h> <C-w>h
 nnoremap <S-l> <C-w>l
+
+
+" Tab Firefox like tab navigation Ctrl+j & Ctrl+k
+noremap <C-right> :tabn<CR>
+noremap <C-left> :tabp<CR>
 
 
 " Custom Function Key Map
@@ -109,8 +117,11 @@ vnoremap > >gv
 " -------------------------
 " http://kien.github.io/ctrlp.vim/#installation
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_root_markers = ['.project_root', '.git']
+" https://github.com/kien/ctrlp.vim/issues/181
+"let g:ctrlp_root_markers = ['.project_root', '.git']
+let g:ctrlp_root_markers = ['.project_root']
 let g:ctrlp_use_caching = 1
+"let g:ctrlp_working_path_mode = ""
 let g:ctrlp_working_path_mode = 2
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.svn
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
