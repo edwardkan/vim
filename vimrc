@@ -76,8 +76,14 @@ au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 noremap <C-t> :tabnew<CR>
 
 " Tab navigation Ctrl+j & Ctrl+k
-noremap <C-j> :tabp<CR>
-noremap <C-k> :tabn<CR>
+"noremap <C-j> :tabp<CR>
+"noremap <C-k> :tabn<CR>
+noremap <C-right> :tabn<CR>
+noremap <C-left> :tabp<CR>
+
+
+noremap <C-j> :BufSurfBack<CR>
+noremap <C-k> :BufSurfForward<CR>
 
 " Quicker window movement
 nnoremap <S-j> <C-w>j
@@ -90,7 +96,10 @@ nnoremap <S-l> <C-w>l
 " --------------------------
 
 " C++ build with -g debug flag F3
-map <F3> : !g++ -std=c++0x -g % && ./a.out <CR>
+" map <F3> : !g++ -std=c++0x -g % && ./a.out <CR>
+
+"Tlist
+nmap <F3> :TlistToggle<CR>
  
 " C++ build & run F4
 " map <F4> : !gcc % && ./a.out <CR>
@@ -237,4 +246,14 @@ if has('python3')
     let g:gundo_prefer_python3 = 1
 endif
 
+
+"TagList 
+"-----------------------------
+" Change TagList display
+" http://rustyrazorblade.com/2010/10/customize-taglist-plugin-display/
+let tlist_php_settings = 'php;c:class;f:function'
+let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
+let Tlist_Show_One_File = 1       " Only show tags for current buffer
+let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
+let Tlist_Use_Right_Window = 1    " Show Tlist pane on the right instead of defaul left
 
