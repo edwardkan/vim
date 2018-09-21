@@ -55,6 +55,9 @@ set completeopt+=longest
 set history=1000 
 
 
+" Leader Key
+let mapleader = ","
+
 " Custom syntax definition
 " -------------------------
 
@@ -134,6 +137,9 @@ let g:ctrlp_clear_cache_on_exit = 0
 " ------------------------
 nmap <F2> :NERDTreeToggle<CR>
 noremap <C-x> :CtrlPBuffer<CR>
+
+" Reveal file on NERDTree 
+noremap <Leader> :NERDTreeFind<CR>
 
 
 " AutoFormat
