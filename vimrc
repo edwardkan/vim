@@ -54,9 +54,9 @@ set completeopt+=longest
 " History
 set history=1000 
 
-
 " Leader Key
 let mapleader = ","
+
 
 " Custom syntax definition
 " -------------------------
